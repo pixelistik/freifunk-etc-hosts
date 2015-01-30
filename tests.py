@@ -18,15 +18,27 @@ class TestConverter(unittest.TestCase):
         }
     }
 """
+    f = open('tests/fixtures/case-1/alfred_merged.json', 'r')
+    case_1_input = f.read()
+    f.close()
+
+    f = open('tests/fixtures/case-1/hosts', 'r')
+    case_1_output = f.read()
+    f.close()
 
     def setUp(self):
         self.converter = converter.Converter()
 
     def testConvert(self):
-        expected = "2a03:2260:40:0:c66e:1fff:fea2:97ae	testhost"
+        expected = "2a03:2260:40:0:c66e:1fff:fea2:97ae	testhost\n"
         result = self.converter.convert(self.simple_node)
 
         self.assertEqual(result, expected)
+
+    def testConvertFile(self):
+        result = self.converter.convert(self.case_1_input)
+
+        self.assertEqual(str(result), str(self.case_1_output))
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)

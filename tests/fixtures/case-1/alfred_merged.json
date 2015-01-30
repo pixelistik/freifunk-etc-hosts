@@ -1,0 +1,174 @@
+{
+  "e8:94:f6:4b:2f:56": {
+    "location": {
+      "longitude": 6.90816671,
+      "latitude": 51.22096392
+    },
+    "network": {
+      "mac": "e8:94:f6:4b:2f:56",
+      "addresses": [
+        "2a03:2260:40:0:ea94:f6ff:fe4b:2f56",
+        "fda0:747e:ab29:cafe:ea94:f6ff:fe4b:2f56",
+        "fe80:0:0:0:ea94:f6ff:fe4b:2f56"
+      ],
+      "mesh_interfaces": [
+        "ea:98:f6:4b:2f:56",
+        "ea:97:f7:4b:2f:56"
+      ]
+    },
+    "node_id": "e894f64b2f56",
+    "hostname": "Brillenshop",
+    "hardware": {
+      "model": "TP-Link TL-WR841N/ND v9"
+    },
+    "owner": {
+      "contact": "freifunk@brillen-shop.de"
+    },
+    "software": {
+      "fastd": {
+        "version": "v16",
+        "enabled": true
+      },
+      "autoupdater": {
+        "enabled": true,
+        "branch": "beta"
+      },
+      "firmware": {
+        "base": "gluon-v2014.4",
+        "release": "2014.4-beta-6"
+      },
+      "batman-adv": {
+        "compat": 14,
+        "version": "2013.4.0"
+      }
+    },
+    "uptime": 298917.92,
+    "rootfs_usage": 0.36875,
+    "memory": {
+      "free": 3440,
+      "cached": 2980,
+      "total": 28860,
+      "buffers": 1524
+    },
+    "clients": {
+      "wifi": 0,
+      "total": 0
+    },
+    "idletime": 227554.27,
+    "processes": {
+      "total": 45,
+      "running": 1
+    },
+    "gateway": "04:be:ef:ca:fe:02",
+    "traffic": {
+      "tx": {
+        "packets": 703923,
+        "bytes": 143217705,
+        "dropped": 4062
+      },
+      "mgmt_tx": {
+        "bytes": 1624495641,
+        "packets": 6071867
+      },
+      "rx": {
+        "bytes": 1653515258,
+        "packets": 12566648
+      },
+      "mgmt_rx": {
+        "bytes": 1790358226,
+        "packets": 17020106
+      },
+      "forward": {
+        "bytes": 85452,
+        "packets": 802
+      }
+    },
+    "loadavg": 0.18
+  },
+  "c4:6e:1f:a2:97:ae": {
+    "location": {
+      "longitude": 6.0846340656281,
+      "latitude": 50.775520705088
+    },
+    "network": {
+      "mac": "c4:6e:1f:a2:97:ae",
+      "addresses": [
+        "fe80:0:0:0:c66e:1fff:fea2:97ae",
+        "fda0:747e:ab29:cafe:c66e:1fff:fea2:97ae",
+        "2a03:2260:40:0:c66e:1fff:fea2:97ae"
+      ],
+      "mesh_interfaces": [
+        "c6:72:1f:a2:97:ae",
+        "c6:71:20:a2:97:ae"
+      ]
+    },
+    "node_id": "c46e1fa297ae",
+    "hostname": "ffac-Dinette_Terrasse",
+    "hardware": {
+      "model": "TP-Link TL-WR841N/ND v9"
+    },
+    "owner": {
+      "contact": "+4924199766522"
+    },
+    "software": {
+      "fastd": {
+        "version": "v16",
+        "enabled": true
+      },
+      "autoupdater": {
+        "enabled": true,
+        "branch": "stable"
+      },
+      "firmware": {
+        "base": "gluon-v2014.4",
+        "release": "2014.4-stable-2"
+      },
+      "batman-adv": {
+        "compat": 14,
+        "version": "2013.4.0"
+      }
+    },
+    "uptime": 732435.5,
+    "rootfs_usage": 0.36875,
+    "memory": {
+      "free": 6756,
+      "cached": 2976,
+      "total": 28860,
+      "buffers": 1512
+    },
+    "clients": {
+      "wifi": 3,
+      "total": 3
+    },
+    "idletime": 558575.89,
+    "processes": {
+      "total": 44,
+      "running": 1
+    },
+    "gateway": "04:be:ef:ca:fe:02",
+    "traffic": {
+      "tx": {
+        "packets": 1897391,
+        "bytes": 257467029,
+        "dropped": 4958
+      },
+      "mgmt_tx": {
+        "bytes": 3551810993,
+        "packets": 15979445
+      },
+      "rx": {
+        "bytes": 4667108711,
+        "packets": 29416848
+      },
+      "mgmt_rx": {
+        "bytes": 3900309643,
+        "packets": 18046796
+      },
+      "forward": {
+        "bytes": 60137087,
+        "packets": 205326
+      }
+    },
+    "loadavg": 0.4
+  }
+}
