@@ -1,0 +1,10 @@
+*~
+*.marks
+*#*#
+.DS_Store
+*.pyc
+dist/
+build/
+env/
+Scrass.egg-info/
+
