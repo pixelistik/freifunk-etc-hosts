@@ -1,7 +1,5 @@
 import unittest
 import freifunk_etc_hosts
-import logging
-import os.path
 import json
 
 class TestConverter(unittest.TestCase):
@@ -25,7 +23,7 @@ class TestConverter(unittest.TestCase):
     }
 """
 
-        expected = "2a03:2260:40:0:c66e:1fff:fea2:97ae	testhost\n"
+        expected = "2a03:2260:40:0:c66e:1fff:fea2:97ae\ttesthost\n"
         result = self.converter._parse_json(json.loads(simple_node))
 
         self.assertEqual(result, expected)
@@ -53,6 +51,5 @@ class TestConverter(unittest.TestCase):
         self.assertEqual(str(result), str(expected))
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.DEBUG)
     unittest.main()
 

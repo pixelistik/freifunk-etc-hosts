@@ -19,31 +19,25 @@ class Converter():
         return "\n".join(map(lambda entry: entry[1] + "\t" + entry[0], sorted(entries))) + "\n"
 
 def main():
-	c = Converter()
+    c = Converter()
 
-	args = _parseArguments()
+    args = _parseArguments()
 
-	input_file = urllib.urlopen(args.i)
-	print c.convert(input_file)
+    input_file = urllib.urlopen(args.i)
+    print c.convert(input_file)
 
 def _parseArguments():
-		"""
-		Get the given command line arguments
-		"""
-		argumentParser = argparse.ArgumentParser(description="Convert an Alfred JSON file into an /etc/hosts file.")
-		argumentParser.add_argument(
-			'-i',
-			metavar='input URL',
-			default="http://ffmap.freifunk-rheinland.net/alfred_merged.json",
-			help='input URL'
-		)
-		"""argumentParser.add_argument(
-			'-o',
-			metavar='output file',
-			default="-",
-			help='output file'
-		)"""
-		return argumentParser.parse_args()
+        """
+        Get the given command line arguments
+        """
+        argumentParser = argparse.ArgumentParser(description="Convert an Alfred JSON file into an /etc/hosts file.")
+        argumentParser.add_argument(
+            "-i",
+            metavar="input URL",
+            default="http://ffmap.freifunk-rheinland.net/alfred_merged.json",
+            help="input URL"
+        )
+        return argumentParser.parse_args()
 
 if __name__ == '__main__':
-	main()
+    main()
