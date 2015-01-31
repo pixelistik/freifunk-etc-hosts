@@ -1,0 +1,7 @@
+usage: freifunk_etc_hosts.py [-h] [-i input URL]
+
+Convert an Alfred JSON file into an /etc/hosts file.
+
+optional arguments:
+  -h, --help    show this help message and exit
+  -i input URL  input URL (default: http://ffmap.freifunk-rheinland.net/alfred_merged.json)
