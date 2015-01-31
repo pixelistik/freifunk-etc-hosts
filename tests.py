@@ -1,5 +1,5 @@
 import unittest
-from freifunk_etc_hosts import converter
+import freifunk_etc_hosts
 import logging
 import os.path
 import json
@@ -24,7 +24,7 @@ class TestConverter(unittest.TestCase):
     f.close()
 
     def setUp(self):
-        self.converter = converter.Converter()
+        self.converter = freifunk_etc_hosts.Converter()
 
     def test_parse_json(self):
         expected = "2a03:2260:40:0:c66e:1fff:fea2:97ae	testhost\n"
