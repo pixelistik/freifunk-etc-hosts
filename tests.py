@@ -42,11 +42,11 @@ class TestConverter(unittest.TestCase):
         self.assertEqual(str(result), str(expected))
 
     def test_alphabetical_order(self):
-        f = open('tests/fixtures/alphabetical_order/hosts', 'r')
+        f = open('tests/fixtures/alphabetical-order/hosts', 'r')
         expected = f.read()
         f.close()
 
-        f = open('tests/fixtures/alphabetical_order/alfred_merged.json', 'r')
+        f = open('tests/fixtures/alphabetical-order/alfred_merged.json', 'r')
         result = self.converter.convert(f)
         f.close()
 

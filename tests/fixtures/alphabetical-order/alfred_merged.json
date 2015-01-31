@@ -1,0 +1,26 @@
+{
+	"c4:6e:1f:a2:97:03": {
+		"network": {
+		  "addresses": [
+			"2a03:2260:40:0:c66e:1fff:fea2:0001"
+		  ]
+		},
+		"hostname": "a"
+	},
+	"c4:6e:1f:a2:97:02": {
+		"network": {
+		  "addresses": [
+			"2a03:2260:40:0:c66e:1fff:fea2:0002"
+		  ]
+		},
+		"hostname": "c"
+	},
+	"c4:6e:1f:a2:97:01": {
+		"network": {
+		  "addresses": [
+			"2a03:2260:40:0:c66e:1fff:fea2:0003"
+		  ]
+		},
+		"hostname": "b"
+	}
+}

@@ -11,13 +11,12 @@ class Converter():
     def _parse_json(self, data):
         entries = []
 
-        for item in data:
-            node = data[item]
+        for key, node in data.iteritems():
             for address in node["network"]["addresses"]:
                 if not "fe80:" in address and not "fda0" in address:
-                    entries.append(address + "	" + node["hostname"])
+                    entries.append((node["hostname"], address))
 
-        return "\n".join(reversed(entries)) + "\n"
+        return "\n".join(map(lambda entry: entry[1] + "\t" + entry[0], sorted(entries))) + "\n"
 
 def main():
 	c = Converter()
