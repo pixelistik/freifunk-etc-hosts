@@ -2,6 +2,7 @@ import unittest
 from freifunk_etc_hosts import converter
 import logging
 import os.path
+import json
 
 class TestConverter(unittest.TestCase):
     simple_node = """
@@ -18,27 +19,25 @@ class TestConverter(unittest.TestCase):
         }
     }
 """
-    f = open('tests/fixtures/case-1/alfred_merged.json', 'r')
-    case_1_input = f.read()
-    f.close()
-
     f = open('tests/fixtures/case-1/hosts', 'r')
-    case_1_output = f.read()
+    case_1_expected = f.read()
     f.close()
 
     def setUp(self):
         self.converter = converter.Converter()
 
-    def testConvert(self):
+    def test_parse_json(self):
         expected = "2a03:2260:40:0:c66e:1fff:fea2:97ae	testhost\n"
-        result = self.converter.convert(self.simple_node)
+        result = self.converter._parse_json(json.loads(self.simple_node))
 
         self.assertEqual(result, expected)
 
-    def testConvertFile(self):
-        result = self.converter.convert(self.case_1_input)
+    def test_convert(self):
+        f = open('tests/fixtures/case-1/alfred_merged.json', 'r')
+        result = self.converter.convert(f)
+        f.close()
 
-        self.assertEqual(str(result), str(self.case_1_output))
+        self.assertEqual(str(result), str(self.case_1_expected))
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)

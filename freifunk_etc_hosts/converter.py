@@ -1,9 +1,13 @@
+import urllib
 import json
 
 class Converter():
-    def convert(self, input):
-        data = json.loads(input)
+    def convert(self, input_file):
+        data = json.load(input_file)
 
+        return self._parse_json(data)
+
+    def _parse_json(self, data):
         entries = []
 
         for item in data:
